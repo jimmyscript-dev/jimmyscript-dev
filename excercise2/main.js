@@ -1,4 +1,4 @@
-import { checkMovie, topMovies } from "./modules.js";
+import { topMovies, checkMovie } from "./modules.js";
 
-console.log(checkMovie('Star Wars'));
+console.log(checkMovie('Spirited Away'));
 console.log(topMovies);

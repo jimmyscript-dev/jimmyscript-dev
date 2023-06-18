@@ -1,2 +1,2 @@
-export {checkMovie} from "./moduleA.js";
-export { topMovies } from "./moduleB.js"
+export { checkMovie } from "./moduleA.js";
+export { topMovies } from "./moduleB.js";
