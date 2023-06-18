@@ -1,3 +1,3 @@
-import {b} from "./moduleB.js"
+import { b } from "./moduleB.js";
 
-console.log('MAIN')
+console.log('MAIN');
