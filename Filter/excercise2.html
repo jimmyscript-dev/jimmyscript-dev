@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+</head>
+
+<body>
+  <script>
+    const prices = [1.23, 19.99, 85.2, 32.87, 8, 5.2];
+
+    const lowPrice = prices.filter((price) => {
+      if (price * 1.15 < 10) {
+        return true;
+      }
+      
+      return false;
+    })
+
+    console.log(prices);
+    console.log(lowPrice);
+  </script>
+</body>
+
+</html>

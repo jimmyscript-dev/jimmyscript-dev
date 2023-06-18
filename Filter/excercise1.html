@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+</head>
+
+<body>
+  <script>
+    const countries = ['France', 'South Africa', 'Brazil', 'United States', 'Sweden'];
+
+    const spaceBetween = countries.filter((country) => {
+      if (country.includes(' ')) {
+        return true;
+      }
+
+      return false;
+    });
+    console.log(countries);
+    console.log(spaceBetween); //South Africa, United States
+  </script>
+</body>
+
+</html>
