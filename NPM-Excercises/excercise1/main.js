@@ -3,7 +3,7 @@ import chalk, { } from 'chalk';
 const combineColor = chalk.blue('Hello') + chalk.red('world!');
 console.log(combineColor);
 
-const combined = chalk.bgRed.blue.bold('Hello World');
+const combined = chalk.bgRed.yellowBright.bold('Hello World');
 console.log(combined);
 
 const hardware = `
