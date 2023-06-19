@@ -8,8 +8,5 @@
   },
   "author": "",
   "license": "ISC",
-  "type": "module",
-  "dependencies": {
-    "lodash-es": "^4.17.21"
-  }
+  "type": "module"
 }
