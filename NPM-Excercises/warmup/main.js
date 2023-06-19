@@ -21,7 +21,7 @@ const totalSum = reduce([1, 2], (sum, num) => {
 
 console.log(totalSum);
 
-const bigCase = toUpper('I love Manny Pacquiao');
+const bigCase = toUpper('the quick brown fox jumps over the lazy dog.');
 console.log(bigCase);
 
 const users = [{
@@ -38,3 +38,9 @@ const users = [{
 
 const filtering = filter(users, ['active', false]);
 console.log(filtering);
+
+//! Barney
+const filter2 = filter(users, ['user', 'barney']); 
+console.log(filter2);
+const fitler3 = filter(users, ['age', 36]);
+console.log(fitler3);
