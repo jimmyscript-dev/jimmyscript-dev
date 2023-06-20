@@ -1,6 +1,6 @@
 import fetch from 'node-fetch';
 
-const response = fetch('https://www.wallhaven.cc/');
+const response = fetch('https://www.wallhaven.cc/', );
 
 
 /*response.then((result) => {
