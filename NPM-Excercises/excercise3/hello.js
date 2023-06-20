@@ -8,4 +8,4 @@ program
 program.parse();
 
 const options = program.opts();
-console.log(`Hello ${options.name}`)
+console.log(`Hello ${options.name}`);
