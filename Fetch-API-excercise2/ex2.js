@@ -47,3 +47,9 @@ const gengarSprite = fetch('https://img.pokemondb.net/sprites/scarlet-violet/nor
     .then((pokeIMG) => {
         fs.writeFile('gengar_Sprite.png', Buffer.from(pokeIMG))
     })
+
+fetch('https://img.pokemondb.net/sprites/diamond-pearl/shiny/gengar.png')
+    .then((response) => response.arrayBuffer())
+    .then((pokeSprite) => {
+        fs.writeFile('shiny_gengar.png', Buffer.from(pokeSprite))
+    })
