@@ -7,3 +7,6 @@ fetch('https://w.wallhaven.cc/full/j3/wallhaven-j3m8y5.png')
     .then((image) => {
         fs.writeFile('wallpaper.png', Buffer.from(image))
     })
+
+
+fetch()

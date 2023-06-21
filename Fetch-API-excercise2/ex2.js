@@ -1,4 +1,5 @@
 import fetch from 'node-fetch';
+import fs from 'fs/promises'
 
 const response = fetch('https://pokeapi.co/api/v2/pokemon/pikachu')
     .then((response) => response.json())
@@ -39,3 +40,10 @@ const getGengar = fetch('https://pokeapi.co/api/v2/pokemon/gengar')
     `
     console.log(pokemonBasicStat);
 })
+
+
+const gengarSprite = fetch('https://img.pokemondb.net/sprites/scarlet-violet/normal/1x/gengar.png')
+    .then((response) => response.arrayBuffer())
+    .then((pokeIMG) => {
+        fs.writeFile('gengar_Sprite.png', Buffer.from(pokeIMG))
+    })
