@@ -2,9 +2,8 @@ import fetch from 'node-fetch';
 import fs from 'fs/promises';
 
 
-
-const response = fetch('https://w.wallhaven.cc/full/yx/wallhaven-yxqzpd.jpg')
+fetch('https://w.wallhaven.cc/full/j3/wallhaven-j3m8y5.png')
     .then((response) => response.arrayBuffer())
-    .then((result) => {
-        fs.writeFile('wallpaper.jpg', buff.from(result))
+    .then((image) => {
+        fs.writeFile('wallpaper.png', Buffer.from(image))
     })
