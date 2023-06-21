@@ -2,11 +2,14 @@ import fetch from 'node-fetch';
 import fs from 'fs/promises';
 
 
-fetch('https://w.wallhaven.cc/full/j3/wallhaven-j3m8y5.png')
+fetch('https://w.wallhaven.cc/full/8o/wallhaven-8ow3q1.jpg')
     .then((response) => response.arrayBuffer())
     .then((image) => {
-        fs.writeFile('wallpaper.png', Buffer.from(image))
+        fs.writeFile('wallpaper.jpg', Buffer.from(image))
     })
 
-
-fetch()
+fetch('https://w.wallhaven.cc/full/72/wallhaven-72kqeo.png')
+    .then((response) => response.arrayBuffer())
+    .then((fetchImage) => {
+        fs.writeFile('wallpaper_2.png', Buffer.from(fetchImage))
+    })
