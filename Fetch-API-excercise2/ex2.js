@@ -3,7 +3,7 @@ import fetch from 'node-fetch';
 const response = fetch('https://pokeapi.co/api/v2/pokemon/pikachu')
     .then((response) => response.json())
     .then((result) => {
-        const fetchData = result.sprites.other["official-artwork"]
+        const fetchData = result.sprites.other["official-artwork"].front_default;
         console.log(fetchData);
     })
 
@@ -26,7 +26,7 @@ const getGengar = fetch('https://pokeapi.co/api/v2/pokemon/gengar')
     const pokeType2 = pokeDex.types[1].type.name; //Poison
     const pokeAbility = pokeDex.abilities[0].ability.name; // cursed-body
 
-    const pokemonBasicStat = `
+    const pokemonBasicStat = ` 
     GENGAR STATS:
     ${fetchStatsHP}: ${baseStatHP}
     ${baseStatAtk}: ${baseAtk}
