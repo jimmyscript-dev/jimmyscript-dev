@@ -1,16 +1,8 @@
-/*const counter = (number) => {
-    while (number >= 0) {
-        console.log(number)
-        number--
+const countDown = (number) => {
+    if (number > 0) {
+        console.log(number);
+        countDown(number - 1);
     }
-}
-counter(100)*/
+};
 
-const counter = (number) => {
-    console.log(number);
-    if (number === 0) return
-    counter(number - 1)
-    
-}
-
-counter(10);
+countDown(100);
