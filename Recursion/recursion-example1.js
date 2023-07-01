@@ -27,16 +27,15 @@ const tree = {
     ]
 };
 
-
-const getTheChildNames = (obj) => {
-    if (obj.children.length === 0) {
+const getChildrenName = (objectName) => {
+    if (objectName.children.length === null) {
         return;
     }
-    obj.children.forEach((childrenNames) => {
-        console.log(childrenNames.name);
-        return getTheChildNames(childrenNames);
+    objectName.children.forEach((child) => {
+        console.log(child.name);
+        return getChildrenName(child);
     })
 };
 
-const result = getTheChildNames(tree);
+const result = getChildrenName(tree);
 console.log(result);
