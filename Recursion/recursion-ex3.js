@@ -1,15 +1,14 @@
 const flatten = (obj) => {
     let value = {};
     for (item in obj) {
-        if (typeof obj[item] === 'object' && !Array.isArray(item)) {
-            const objectFlat = flatten(obj[item])
-            value = {...value, ...objectFlat}
+        if (typeof obj[item] === 'object') {
+            const objflat = flatten(obj[item])
+            value = {...value, ...flatten(objflat)};
             return value;
         } else {
-            value[item] = obj[item];
+            value[item] = obj[item]
         }
     }
-
 
     return value;
 }
