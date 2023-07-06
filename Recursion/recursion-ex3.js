@@ -1,15 +1,16 @@
 const flatten = (obj) => {
     let value = {};
-    for (item in obj) {
+    for (const item in obj) {
         if (typeof obj[item] === 'object') {
-            const objflat = flatten(obj[item])
-            value = {...value, ...flatten(objflat)};
+            const objFlat = flatten(obj[item]); //* assuming this will become an object. 
+            value = {...value, ...flatten(obj[item])} //* object values will be stored inside 'value' object.
             return value;
+            //console.log(value)
         } else {
-            value[item] = obj[item]
+            (value[item] = obj[item]); //* store ojb directly
+            
         }
     }
-
     return value;
 }
 
@@ -34,4 +35,5 @@ const output = flatten({
         }
     }
 });
+
 console.log(output);
