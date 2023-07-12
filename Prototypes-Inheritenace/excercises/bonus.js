@@ -3,6 +3,6 @@ function Person(name) {
 }
 
 const celo = Person('Cleo');
-console.log(celo);
 const taylor = new Person('Taylor');
+console.log(Object.getOwnPropertyNames(taylor.__proto__))
 console.log(taylor);
