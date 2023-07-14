@@ -27,7 +27,6 @@ const alex = {
         }
     }
 }
-
 alex.friend.greet();
 
 
