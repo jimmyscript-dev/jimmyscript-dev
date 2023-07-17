@@ -5,8 +5,8 @@ class Animal {
     }
 }
 
-const tiger = new Animal('Tiger', 'Big Cats');
-const lemur = new Animal('Lemur', 'Primates');
+const tiger = new Animal('Cats', 'Tiger');
+const lemur = new Animal('Primate', 'Lemur');
 
 console.log(tiger);
 console.log(lemur);
