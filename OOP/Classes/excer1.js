@@ -6,23 +6,30 @@ class Student {
     }
 
     addGrade(grade) {
-        this.grades.push(grade);
+        this.grades.push(grade)
     }
 
     gpa() {
-        let sum = 0;
-        for (const number of this.grades) {
-            sum += number;
+        let addGPA = 0;
+        for (const grade of this.grades) {
+            addGPA += grade;
         }
-        return sum / this.grades.length;
+
+        return addGPA / this.grades.length;
     }
 }
 
-const eva = new Student('Jim', 'English', [85, 87, 88]);
-console.log(eva);
-const gpa = eva.gpa();
-console.log(gpa)
 
-const newStudent = new Student('Jim', 'Filipino', [90, 97, 85, 77]);
-const average = newStudent.gpa();
-console.log(average);
+const evaluation = new Student('Jim', 'English', [90, 92, 88, 89, 87, 85]);
+const averageGrade = evaluation.gpa();
+console.log(evaluation);
+console.log(averageGrade);
+
+console.log('------------------');
+const newEva = new Student('Ivo', 'Maritime', [93, 94, 96, 88, 85]);
+const averageGrade2 = newEva.gpa();
+console.log(newEva);
+console.log(averageGrade2);
+
+newEva.addGrade(90);
+console.log(newEva.gpa())
