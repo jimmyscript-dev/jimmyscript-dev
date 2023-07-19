@@ -1,11 +1,11 @@
 class Bookstore {
     constructor(books) {
-        this.books = books;
+        this.books = books; //* this is an array.
     }
 
     listBooks() {
         for (const book of this.books) {
-            console.log(`${book.name} by ${book.author}`)
+            book.availableBooks();
         }
     }
 };
@@ -15,11 +15,14 @@ class Book {
         this.name = name;
         this.author = author;
     }
+
+    availableBooks() {
+        console.log(`${this.name} by ${this.author}`)
+    }
 };
 
 const harryPotter = new Book('Harry Potter', 'J.K. Rowling');
-const nineteen84 = new Book('Percy Jackson', 'Rick Riordan');
+const percyJackson = new Book('Percy Jackson', 'Rick Riordan');
 
-const bookStore = new Bookstore([harryPotter, nineteen84]);
-
-bookStore.listBooks();
+const bookstore = new Bookstore([harryPotter, percyJackson]);
+bookstore.listBooks();
