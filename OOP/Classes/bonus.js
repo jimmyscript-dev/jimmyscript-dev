@@ -65,10 +65,18 @@ class EnemyFactory {
 };
 
 const factory = new EnemyFactory();
+//console.log(Object.getOwnPropertyNames(factory));
+//console.log(Object.getOwnPropertyNames(factory.__proto__));
+//console.log(Object.getOwnPropertyNames(factory.__proto__.__proto__.__proto__));// NULL
+console.log(factory.__proto__.constructor.name)
 const superman = factory.generateFlyingEnemy('superman');
+//console.log(Object.getOwnPropertyNames(superman.__proto__.__proto__.__proto__));// null\
+console.log(superman.constructor); //[class FlyingEnemy]
+console.log(superman.constructor.name) // FlyingEnemy
 superman.fly(); // superman can fly!
 
 const aquaman = EnemyFactory.generateSwimmingEnemy('aquaman');
+console.log(EnemyFactory); // [class EnemyFactory]
 aquaman.swim();
 
 const martianManhunter = EnemyFactory.generateShapeShiftEnemy('Martian Manhunter');
@@ -77,3 +85,8 @@ superman.laserBeam();
 
 const flash = EnemyFactory.generateSuperSpeedEnemy('Flash');
 flash.flash();
+
+
+console.log(factory.__proto__);
+console.log(superman.__proto__)
+console.log(aquaman.__proto__)
