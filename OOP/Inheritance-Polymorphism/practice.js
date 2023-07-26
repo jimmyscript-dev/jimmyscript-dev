@@ -18,6 +18,6 @@ class Spaceship extends Vehicle {
 
 
 const spaceship = new Spaceship('Falcon', 1000, 2);
-console.log(spaceship);
-console.log(spaceship.getMaxSpeed());
-console.log(spaceship.numRocketEngines);
+console.log(spaceship); // Spaceship { name: 'Falcon', maxSpeed: 1000, numRocketEngines: 2 }
+console.log(spaceship.getMaxSpeed()); // 1000
+console.log(spaceship.numRocketEngines); //2
